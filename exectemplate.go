@@ -20,7 +20,7 @@ func Exec(template string, values map[string]string) error {
 
 func interpolate(tmpl string, values map[string]string) (string, error) {
 	builder := strings.Builder{}
-	parsed, err := template.New("stencil").Parse(tmpl)
+	parsed, err := template.New("template").Parse(tmpl)
 	if err != nil {
 		return "", err
 	}
